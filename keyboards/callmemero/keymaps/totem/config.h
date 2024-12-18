@@ -29,5 +29,5 @@ for more options.
 //#define NO_ACTION_TAPPING
 //#define NO_MUSIC_MODE
 
-#define COMBO_COUNT 31
+#define COMBO_COUNT 50
 #define COMBO_MUST_TAP_PER_COMBO

@@ -165,7 +165,6 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(sz_combo, RALT(KC_S))
 };
 
-
 // ┌─────────────────────────────────────────────────┐
 // │ d e f i n e   k e y   o v e r r i d e s         │
 // └─────────────────────────────────────────────────┘
