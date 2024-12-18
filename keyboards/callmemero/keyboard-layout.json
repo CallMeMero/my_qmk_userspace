@@ -1,0 +1,171 @@
+[
+  {
+    "backcolor": "#656565",
+    "css": ".keylabel  {\n    font-weight: bold;\n}\n\n.keylabel2 {\n    color: #dbff00 !important;\n    font-size: 10px;\n}\n\n.keylabel5 {\n    color: #0700ff !important;\n    font-size: 10px;\n}\n\n.keylabel6 {\n    color: #9c5b00 !important;\n    font-size: 10px;\n}\n\n.keylabel2 {\n    color: #009616 !important;\n    font-size: 10px;\n}\n\n.keytop {\n    background-color: rgb(255 255 255 / 0.1) !important;\n}"
+  },
+  [
+    {
+      "x": 1,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "Q\nF12\nboot\n\n\n\n\n+",
+    "W\nF7\n\n\n\n\n\n7",
+    "E\nF8\n\n\n\n\n\n8",
+    "R\nF9\n\n\n\n\n\n9",
+    "T\n\n\n\n\n\n\n*",
+    {
+      "x": 0.75
+    },
+    "Y",
+    {
+      "t": "#000000\n\n\n#dbff00",
+      "fa": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "U\n\n<i class='fa fa-step-backward'></i>\nHome",
+    {
+      "f": 3
+    },
+    "I\n\n<i class='fa fa-volume-up'></i>\n<i class='fa fa-caret-up'></i>",
+    "O\n\n<i class='fa fa-step-forward'></i>\nEnd",
+    "P\n\n\nPgUp"
+  ],
+  [
+    {
+      "x": 1,
+      "t": "#000000",
+      "a": 0,
+      "fa": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "A\nF11\n\n\nCTRL\n\n\n0",
+    "S\nF4\n\n\nALT\n\n\n4",
+    "D\nF5\n\n\nGUI\n\n\n5",
+    "F\nF6\n\n\nSHFT\n\n\n6",
+    {
+      "a": 4
+    },
+    "G\n\n\n\n\n\n\n=",
+    {
+      "x": 0.75
+    },
+    "H",
+    {
+      "t": "#000000\n\n\n#dbff00",
+      "a": 0,
+      "f": 3
+    },
+    "J\n\n\n<i class='fa fa-caret-left'></i>\nSHFT",
+    {
+      "f": 3
+    },
+    "K\n\n<i class='fa fa-volume-down'></i>\n<i class='fa fa-caret-down'></i>\nGUI",
+    {
+      "f": 3
+    },
+    "L\n\n\n<i class='fa fa-caret-right'></i>\nALT",
+    "\"\n\n\nPgDn\nCTRL\n\n'"
+  ],
+  [
+    {
+      "t": "#000000",
+      "a": 4
+    },
+    "TAB\n\n\n\n\n\n\n(",
+    "Z\nF10\n\n\n\n\n\n-",
+    {
+      "f": 3
+    },
+    "X\nF1\n\n\n\n\n\n1",
+    {
+      "t": "#000000\n\n\n\n\n\n\n#0700ff"
+    },
+    "C\nF2\n\n\n\n\n\n2",
+    {
+      "a": 0
+    },
+    "V\nF3\n\n\nHYPR\n\n\n3",
+    {
+      "a": 4
+    },
+    "B\n\n\n\n\n\n\n/",
+    {
+      "x": 0.75,
+      "t": "#000000"
+    },
+    "N",
+    {
+      "t": "#000000\n\n\n#dbff00",
+      "a": 0
+    },
+    "M\n\n\n~\nHYPR",
+    {
+      "t": "#000000",
+      "a": 4
+    },
+    ";\n\n<i class='fa fa-play'></i>\n\n\n\n,",
+    {
+      "t": "#000000\n\n\n#dbff00"
+    },
+    ":\n\n\n/\n\n\n.",
+    {
+      "t": "#000000"
+    },
+    "!\n\n\n\n\n\n?",
+    {
+      "t": "#000000\n\n\n\n\n\n\n#0700ff"
+    },
+    "TAB\n\n\n\n\n\n\n)"
+  ],
+  [
+    {
+      "x": 3,
+      "t": "#000000\n\n\n\n#009616",
+      "a": 0
+    },
+    "ESC\n\n\n\nUTIL",
+    {
+      "t": "#000000\n\n\n\n#dbff00"
+    },
+    "Spc\n\n\n\nNAV",
+    {
+      "t": "#000000",
+      "a": 4
+    },
+    "!Shft",
+    {
+      "x": 0.75
+    },
+    "Ent",
+    {
+      "t": "#000000\n\n\n\n#0700ff",
+      "a": 0
+    },
+    "Bsp\n\n\n\nNUM",
+    {
+      "t": "#000000\n\n\n\n#9c5b00"
+    },
+    "Del\n\n<i class='kb kb-Multimedia-Mute-2'></i>\n\nFUN"
+  ]
+]
