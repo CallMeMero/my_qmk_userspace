@@ -75,10 +75,6 @@ enum custom_keycodes {
 // OTHER KEY DEFINITIONS   ├───────────────────────────────────┐
 
 #define OS_SHT OSM(MOD_LSFT)
-#define EURO_SIGN RALT(KC_5)
-
-// TODO, create marco for undo and redo
-// todo, add keybind for capslock
 
 
 // ┌─────────────────────────────────────────────────┐
@@ -129,12 +125,10 @@ const uint16_t PROGMEM rcbr_combo[] = {MEH_COM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM ae_combo[] = {KC_R, KC_T, COMBO_END};
 const uint16_t PROGMEM oe_combo[] = {SHT_F, KC_G, COMBO_END};
 const uint16_t PROGMEM ue_combo[] = {HYP_V, KC_B, COMBO_END};
+const uint16_t PROGMEM sz_combo[] = {KC_Y, KC_U, COMBO_END};
 
 const uint16_t PROGMEM lt_combo[] = {KC_H, SHT_J, COMBO_END};
 const uint16_t PROGMEM gt_combo[] = {ALT_L, CTL_QUOT, COMBO_END};
-
-// todo, create combo for ß
-
 
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(at_combo, KC_AT),
@@ -168,7 +162,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(ue_combo, RALT(KC_Y)),
   COMBO(lt_combo, KC_LT),
   COMBO(gt_combo, KC_GT),
-  COMBO(euro_combo, EURO_SIGN)
+  COMBO(sz_combo, RALT(KC_S))
 };
 
 
@@ -241,7 +235,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │    A    │    S    │    D    │    F    │    G    ││    H    │    J    │    K    │    L    │    '    │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │    Y    │    X    │    C    │    V    │    B    ││    N    │    M    │    ,;   │    .:   │   ?!    │    TAB  │
+   │   TAB   │    Y    │    X    │    C    │    V    │    B    ││    N    │    M    │    ,;   │    .:   │   ?!    │  ALT_GR │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │  UTIL   │  NAV    │  SHIFT  ││   ENT   │    NUM  │   FUN   │
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘*/
@@ -250,8 +244,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
               CTL_A,    ALT_S,    GUI_D,    SHT_F,    KC_G,      KC_H,     SHT_J,    GUI_K,    ALT_L,    CTL_QUOT,
-    KC_TAB,   KC_Z,     KC_X,     MEH_C,    HYP_V,    KC_B,      KC_N,     HYP_M,    MEH_COM,  KC_DOT,   KC_QUES,  KC_TAB,
-                                  UTIL,     NAV,      OS_SHT,    KC_ENT,      NUM,      FUN
+    OS_SHT,   KC_Z,     KC_X,     MEH_C,    HYP_V,    KC_B,      KC_N,     HYP_M,    MEH_COM,  KC_DOT,   KC_QUES,  KC_RALT,
+                                  UTIL,     NAV,      KC_TAB,    KC_ENT,      NUM,      FUN
  ),
  /*
    ╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
@@ -340,7 +334,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [_UTIL] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              QK_BOOT,  _______,  _______,  _______,   _______,  EURO_SIGN,  KC_MPRV,  KC_VOLU,  KC_MNXT,   _______,
+              QK_BOOT,  _______,  _______,  _______,   _______,  RALT(KC_5),  KC_MPRV,  KC_VOLU,  KC_MNXT,   _______,
               _______,  _______,  _______,  _______,   _______,  _______,  _______,  KC_VOLD,  _______,   _______,
     _______,  _______,  _______,  _______,  _______,   _______,  _______,  _______,  KC_MPLY,  _______,   _______, _______,
                                   _______,  _______,   _______,  _______,  _______,  KC_MUTE
