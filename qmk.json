@@ -1,6 +1,6 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["test/totem", "totem"]
+        ["totem", "totem"]
     ]
 }
