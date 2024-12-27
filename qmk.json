@@ -1,6 +1,6 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["callmemero", "totem"]
+        ["clueboard/66/rev3", "default"]
     ]
 }
