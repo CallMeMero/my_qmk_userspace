@@ -50,18 +50,18 @@ enum custom_keycodes {
 // LEFT HAND HOME ROW MODS ├───────────────────────────────────┐
 
 #define CTL_A MT(MOD_LCTL, KC_A)
-#define ALT_S MT(MOD_LALT, KC_S)
-#define GUI_D MT(MOD_LGUI, KC_D)
-#define SHT_F MT(MOD_LSFT, KC_F)
+#define ALT_R MT(MOD_LALT, KC_R)
+#define GUI_S MT(MOD_LGUI, KC_S)
+#define SHT_T MT(MOD_LSFT, KC_T)
 #define HYP_V MT(MOD_HYPR, KC_V)
 #define MEH_C MT(MOD_MEH, KC_C)
 
 // RIGHT HAND HOME ROW MODS ├───────────────────────────────────┐
 
-#define SHT_J MT(MOD_RSFT, KC_J)
-#define GUI_K MT(MOD_LGUI, KC_K)
-#define ALT_L MT(MOD_LALT, KC_L)
-#define CTL_QUOT MT(MOD_LCTL, KC_QUOT)
+#define SHT_N MT(MOD_RSFT, KC_N)
+#define GUI_E MT(MOD_LGUI, KC_E)
+#define ALT_I MT(MOD_LALT, KC_I)
+#define CTL_O MT(MOD_LCTL, KC_O)
 #define HYP_M MT(MOD_HYPR, KC_M)
 #define MEH_COM MT(MOD_MEH, KC_COMM)
 
@@ -76,59 +76,58 @@ enum custom_keycodes {
 
 #define OS_SHT OSM(MOD_LSFT)
 
-
 // ┌─────────────────────────────────────────────────┐
 // │ d e f i n e   c o m b o s                       │
 // └─────────────────────────────────────────────────┘
 
 // Left hand vertical combos
 // Between top and home row
-const uint16_t PROGMEM at_combo[] = {KC_W, ALT_S, COMBO_END};
-const uint16_t PROGMEM hash_combo[] = {KC_E, GUI_D, COMBO_END};
-const uint16_t PROGMEM dollar_combo[] = {KC_R, SHT_F, COMBO_END};
-const uint16_t PROGMEM perc_combo[] = {KC_T, KC_G, COMBO_END};
+const uint16_t PROGMEM at_combo[] = {KC_W, ALT_R, COMBO_END};
+const uint16_t PROGMEM hash_combo[] = {KC_F, GUI_S, COMBO_END};
+const uint16_t PROGMEM dollar_combo[] = {KC_P, SHT_T, COMBO_END};
+const uint16_t PROGMEM perc_combo[] = {KC_G, KC_D, COMBO_END};
 
 // Between home and bottom row
-const uint16_t PROGMEM grave_combo[] = {ALT_S, KC_X, COMBO_END};
-const uint16_t PROGMEM bsls_combo[] = {GUI_D, MEH_C, COMBO_END};
-const uint16_t PROGMEM eql_combo[] = {SHT_F, HYP_V, COMBO_END};
-const uint16_t PROGMEM tilde_combo[] = {KC_G, KC_B, COMBO_END};
+const uint16_t PROGMEM grave_combo[] = {ALT_R, KC_X, COMBO_END};
+const uint16_t PROGMEM bsls_combo[] = {GUI_S, MEH_C, COMBO_END};
+const uint16_t PROGMEM eql_combo[] = {SHT_T, HYP_V, COMBO_END};
+const uint16_t PROGMEM tilde_combo[] = {KC_D, KC_B, COMBO_END};
 
 // horizontal combos
-const uint16_t PROGMEM esc_combo[] = {ALT_S, SHT_F, COMBO_END};
+const uint16_t PROGMEM esc_combo[] = {ALT_R, SHT_T, COMBO_END};
 const uint16_t PROGMEM copy_combo[] = {KC_X, MEH_C, COMBO_END};
 const uint16_t PROGMEM paste_combo[] = {MEH_C, HYP_V, COMBO_END};
 const uint16_t PROGMEM cut_combo[] = {KC_X, HYP_V, COMBO_END};
 
 // Right hand vertical combos
 // Between top and home row
-const uint16_t PROGMEM caret_combo[] = {KC_Y, KC_H, COMBO_END};
-const uint16_t PROGMEM plus_combo[] = {KC_U, SHT_J, COMBO_END};
-const uint16_t PROGMEM star_combo[] = {KC_I, GUI_K, COMBO_END};
-const uint16_t PROGMEM amp_combo[] = {KC_O, ALT_L, COMBO_END};
+const uint16_t PROGMEM caret_combo[] = {KC_J, KC_H, COMBO_END};
+const uint16_t PROGMEM plus_combo[] = {KC_L, SHT_N, COMBO_END};
+const uint16_t PROGMEM star_combo[] = {KC_U, GUI_E, COMBO_END};
+const uint16_t PROGMEM amp_combo[] = {KC_Y, ALT_I, COMBO_END};
 
 // Between home and bottow row
-const uint16_t PROGMEM unds_combo[] = {KC_H, KC_N, COMBO_END};
-const uint16_t PROGMEM mins_combo[] = {SHT_J, HYP_M, COMBO_END};
-const uint16_t PROGMEM slsh_combo[] = {GUI_K, MEH_COM, COMBO_END};
-const uint16_t PROGMEM pipe_combo[] = {ALT_L, KC_DOT, COMBO_END};
+const uint16_t PROGMEM unds_combo[] = {KC_H, KC_K, COMBO_END};
+const uint16_t PROGMEM mins_combo[] = {SHT_N, HYP_M, COMBO_END};
+const uint16_t PROGMEM slsh_combo[] = {GUI_E, MEH_COM, COMBO_END};
+const uint16_t PROGMEM pipe_combo[] = {ALT_I, KC_DOT, COMBO_END};
 
 // Horizontal combos: brackets
-const uint16_t PROGMEM lsqr_combo[] = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM rsqr_combo[] = {KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM lpar_combo[] = {SHT_J, GUI_K, COMBO_END};
-const uint16_t PROGMEM rpar_combo[] = {GUI_K, ALT_L, COMBO_END};
+const uint16_t PROGMEM lsqr_combo[] = {KC_L, KC_U, COMBO_END};
+const uint16_t PROGMEM rsqr_combo[] = {KC_U, KC_Y, COMBO_END};
+const uint16_t PROGMEM lpar_combo[] = {SHT_N, GUI_E, COMBO_END};
+const uint16_t PROGMEM rpar_combo[] = {GUI_E, ALT_I, COMBO_END};
 const uint16_t PROGMEM lcbr_combo[] = {HYP_M, MEH_COM, COMBO_END};
 const uint16_t PROGMEM rcbr_combo[] = {MEH_COM, KC_DOT, COMBO_END};
 
 // Vertical combos: Umlaute
-const uint16_t PROGMEM ae_combo[] = {KC_R, KC_T, COMBO_END};
-const uint16_t PROGMEM oe_combo[] = {SHT_F, KC_G, COMBO_END};
+const uint16_t PROGMEM ae_combo[] = {KC_P, KC_G, COMBO_END};
+const uint16_t PROGMEM oe_combo[] = {SHT_T, KC_D, COMBO_END};
 const uint16_t PROGMEM ue_combo[] = {HYP_V, KC_B, COMBO_END};
-const uint16_t PROGMEM sz_combo[] = {KC_Y, KC_U, COMBO_END};
+const uint16_t PROGMEM sz_combo[] = {KC_J, KC_L, COMBO_END};
 
-const uint16_t PROGMEM lt_combo[] = {KC_H, SHT_J, COMBO_END};
-const uint16_t PROGMEM gt_combo[] = {ALT_L, CTL_QUOT, COMBO_END};
+const uint16_t PROGMEM lt_combo[] = {KC_H, SHT_N, COMBO_END};
+const uint16_t PROGMEM gt_combo[] = {ALT_I, CTL_O, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(at_combo, KC_AT),
@@ -164,6 +163,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(gt_combo, KC_GT),
   COMBO(sz_combo, RALT(KC_S))
 };
+
 
 // ┌─────────────────────────────────────────────────┐
 // │ d e f i n e   k e y   o v e r r i d e s         │
@@ -230,20 +230,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │ b a s e                                         │      ╭╮╭╮╭╮╭╮
    └─────────────────────────────────────────────────┘      │╰╯╰╯╰╯│
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-             │    Q    │    W    │    E    │    R    │    T    ││    Y    │    U    │    I    │    O    │    P    │
+       ┄┈┈───═╡    Q    │    W    │    F    │    P    │    G    ││    J    │    L    │    U    │    Y    │    '    │
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-             │    A    │    S    │    D    │    F    │    G    ││    H    │    J    │    K    │    L    │    '    │
+             │    A    │    R    │    S    │    T    │    D    ││    H    │    N    │    E    │    I    │    O    │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │    Y    │    X    │    C    │    V    │    B    ││    N    │    M    │    ,;   │    .:   │   ?!    │  ALT_GR │
+   │   TAB   │    Z    │    X    │    C    │    V    │    B    ││    K    │    M    │    ,;   │    .:   │   ?!    │    TAB  │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │  UTIL   │  NAV    │  SHIFT  ││   ENT   │    NUM  │   FUN   │
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘*/
 
    [_BASE] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-              CTL_A,    ALT_S,    GUI_D,    SHT_F,    KC_G,      KC_H,     SHT_J,    GUI_K,    ALT_L,    CTL_QUOT,
-    OS_SHT,   KC_Z,     KC_X,     MEH_C,    HYP_V,    KC_B,      KC_N,     HYP_M,    MEH_COM,  KC_DOT,   KC_QUES,  KC_RALT,
+              KC_Q,     KC_W,     KC_F,     KC_P,     KC_G,      KC_J,     KC_L,     KC_U,     KC_Y,     KC_QUOT,
+              CTL_A,    ALT_R,    GUI_S,    SHT_T,    KC_D,      KC_H,     SHT_N,    GUI_E,    ALT_I,    CTL_O,
+    OS_SHT,   KC_Z,     KC_X,     MEH_C,    HYP_V,    KC_B,      KC_K,     HYP_M,    MEH_COM,  KC_DOT,   KC_QUES,  KC_TAB,
                                   UTIL,     NAV,      KC_TAB,    KC_ENT,      NUM,      FUN
  ),
  /*
@@ -253,7 +253,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │ n a v                                           │      ╭╮╭╮╭╮╭╮
    └─────────────────────────────────────────────────┘      │╰╯╰╯╰╯│
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-             │         │         │         │         │         ││         │  HOME   │   UP    │   END   │  PGUP   │
+     ╌┄┈┈───═╡          │         │         │         │         ││         │  HOME   │   UP    │   END   │  PGUP   │
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │  CTRL   │  ALT    │  CMD    │   SHFT  │         ││         │  LEFT   │  DOWN   │  RIGHT  │  PGDN   │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
@@ -266,7 +266,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               _______,  _______,  _______,  _______, _______,    _______,  KC_HOME,  KC_UP,    KC_END,   KC_PGUP,
               KC_LCTL,  KC_LALT,  KC_LGUI,  KC_LSFT, _______,    _______,  KC_LEFT,  KC_DOWN,  KC_RIGHT, KC_PGDN,
-    _______,  _______,  _______,  KC_MEH,   KC_HYPR, _______,    _______,  KC_TILD,  _______,  KC_SLSH,  _______,   _______,
+    _______,     _______,  _______,  KC_MEH,   KC_HYPR, _______,    _______,  KC_TILD,  _______,  KC_SLSH,  _______,   _______,
                                   _______,  _______, _______,    KC_ENT,   KC_BSPC,   KC_DEL
  ),
  /*
@@ -276,7 +276,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │ n u m                                           │      ╭╮╭╮╭╮╭╮
    └─────────────────────────────────────────────────┘      │╰╯╰╯╰╯│
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-             │    +    │    7    │    8    │    9    │    *    ││         │         │         │         │         │
+     ╌┄┈┈── ─═╡    +    │    7    │    8    │    9    │    *    ││         │         │         │         │         │
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │    0    │    4    │    5    │    6    │    =    ││         │   SHFT  │   CMD   │   ALT   │   CTRL  │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
@@ -299,7 +299,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │ f u n c t i o n                                 │      ╭╮╭╮╭╮╭╮
    └─────────────────────────────────────────────────┘      │╰╯╰╯╰╯│
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-             │   F12   │   F7    │   F8    │   F9    │         ││         │         │         │         │         │
+     ╌┄┈ ┈───═╡   F12   │   F7    │   F8    │   F9    │         ││         │         │         │         │         │
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │   F11   │   F4    │   F5    │   F6    │         ││         │  SHFT   │   CMD   │   ALT   │  CTRL   │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
@@ -322,11 +322,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │ u t i l i t y                                   │      ╭╮╭╮╭╮╭╮
    └─────────────────────────────────────────────────┘      │╰╯╰╯╰╯│
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-             │   BOOT  │         │         │         │         ││    €    │  <<<<<  │  VOL+   │  >>>>>  │         │
+     ╌┄┈ ┈───═╡   BOOT  │         │         │         │         ││    €    │  <<<<<  │  VOL+   │  >>>>>  │         │
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │         │         │         │         │         ││         │         │  VOL-   │         │         │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │         │         │         │         │         │         ││         │         │  PL/PA  │         │         │         │
+   │         │         │         │         │         │         ││         │         │         │         │         │         │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │         │         │         ││         │         │  MUTE   │
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
@@ -375,6 +375,3 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
                                                           ████████
 
 */
-
-
-
