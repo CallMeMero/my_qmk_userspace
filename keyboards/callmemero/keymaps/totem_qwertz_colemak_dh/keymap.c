@@ -90,8 +90,8 @@ enum custom_keycodes {
 #define ALT_R MT(MOD_LALT, KC_R)
 #define GUI_S MT(MOD_LGUI, KC_S)
 #define SHT_T MT(MOD_LSFT, KC_T)
-#define HYP_V MT(MOD_HYPR, KC_V)
-#define MEH_D MT(MOD_MEH, KC_D)
+#define HYP_D MT(MOD_HYPR, KC_D)
+#define MEH_C MT(MOD_MEH, KC_C)
 
 // RIGHT HAND HOME ROW MODS ├───────────────────────────────────┐
 
@@ -126,15 +126,15 @@ const uint16_t PROGMEM dollar_combo[] = {KC_P, SHT_T, COMBO_END};
 const uint16_t PROGMEM perc_combo[] = {KC_B, KC_G, COMBO_END};
 
 // Between home and bottom row
-const uint16_t PROGMEM tick_combo[] = {ALT_R, KC_C, COMBO_END};
-const uint16_t PROGMEM bsls_combo[] = {GUI_S, MEH_D, COMBO_END};
-const uint16_t PROGMEM eql_combo[] = {SHT_T, HYP_V, COMBO_END};
-const uint16_t PROGMEM tilde_combo[] = {KC_G, QWERTZ_Z, COMBO_END};
+const uint16_t PROGMEM tick_combo[] = {ALT_R, KC_X, COMBO_END};
+const uint16_t PROGMEM bsls_combo[] = {GUI_S, MEH_C, COMBO_END};
+const uint16_t PROGMEM eql_combo[] = {SHT_T, HYP_D, COMBO_END};
+const uint16_t PROGMEM tilde_combo[] = {KC_G, KC_V, COMBO_END};
 
 // horizontal combos
-const uint16_t PROGMEM copy_combo[] = {KC_C, MEH_D, COMBO_END};
-const uint16_t PROGMEM paste_combo[] = {MEH_D, HYP_V, COMBO_END};
-const uint16_t PROGMEM cut_combo[] = {KC_C, HYP_V, COMBO_END};
+const uint16_t PROGMEM copy_combo[] = {KC_X, MEH_C, COMBO_END};
+const uint16_t PROGMEM paste_combo[] = {MEH_C, HYP_D, COMBO_END};
+const uint16_t PROGMEM cut_combo[] = {KC_X, HYP_D, COMBO_END};
 
 // Right hand vertical combos
 // Between top and home row
@@ -160,7 +160,7 @@ const uint16_t PROGMEM rcbr_combo[] = {MEH_COM, KC_DOT, COMBO_END};
 // Vertical combos: Umlaute
 const uint16_t PROGMEM ae_combo[] = {KC_P, KC_B, COMBO_END};
 const uint16_t PROGMEM oe_combo[] = {SHT_T, KC_G, COMBO_END};
-const uint16_t PROGMEM ue_combo[] = {HYP_V, QWERTZ_Z, COMBO_END};
+const uint16_t PROGMEM ue_combo[] = {HYP_D, KC_V, COMBO_END};
 const uint16_t PROGMEM sz_combo[] = {KC_J, KC_L, COMBO_END};
 
 const uint16_t PROGMEM lt_combo[] = {KC_M, SHT_N, COMBO_END};
@@ -247,7 +247,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │    A    │    R    │    S    │    T    │    G    ││    M    │    N    │    E    │    I    │    O    │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   ESC   │    X    │    C    │    D    │    V    │    Z    ││    K    │    H    │    ,;   │    .:   │   ?!    │  ALT_GR │
+   │   ESC   │    Z    │    X    │    C    │    D    │    V    ││    K    │    H    │    ,;   │    .:   │   ?!    │  ALT_GR │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │  UTIL   │  NAV    │  SHIFT  ││   ENT   │    NUM  │   FUN   │
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘*/
@@ -256,7 +256,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     QWERTZ_Y, QWERTZ_SINGLE_QUOTE,
               CTL_A,    ALT_R,    GUI_S,    SHT_T,    KC_G,      KC_M,     SHT_N,    GUI_E,    ALT_I,    CTL_O,
-    KC_TAB,   KC_X,     KC_C,     MEH_D,    HYP_V,    QWERTZ_Z,  KC_K,     HYP_H,    MEH_COM,  KC_DOT,   QWERTZ_QUES,  KC_RALT,
+    KC_TAB,   QWERTZ_Z, KC_X,     MEH_C,    HYP_D,    KC_V,      KC_K,     HYP_H,    MEH_COM,  KC_DOT,   QWERTZ_QUES,  KC_RALT,
                                   UTIL,     NAV,      OS_SHT,    KC_ENT,   NUM,      FUN
  ),
  /*
