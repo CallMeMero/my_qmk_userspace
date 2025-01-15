@@ -158,10 +158,10 @@ const uint16_t PROGMEM lcbr_combo[] = {HYP_H, MEH_COM, COMBO_END};
 const uint16_t PROGMEM rcbr_combo[] = {MEH_COM, KC_DOT, COMBO_END};
 
 // Vertical combos: Umlaute
-const uint16_t PROGMEM ae_combo[] = {KC_P, KC_B, COMBO_END};
-const uint16_t PROGMEM oe_combo[] = {SHT_T, KC_G, COMBO_END};
-const uint16_t PROGMEM ue_combo[] = {HYP_D, KC_V, COMBO_END};
-const uint16_t PROGMEM sz_combo[] = {KC_J, KC_L, COMBO_END};
+const uint16_t PROGMEM ae_combo[] = {ALT_R, GUI_S, COMBO_END};
+const uint16_t PROGMEM oe_combo[] = {ALT_R, SHT_T, COMBO_END};
+const uint16_t PROGMEM ue_combo[] = {GUI_S, SHT_T, COMBO_END};
+const uint16_t PROGMEM sz_combo[] = {CTL_A, ALT_R, COMBO_END};
 
 const uint16_t PROGMEM lt_combo[] = {KC_M, SHT_N, COMBO_END};
 const uint16_t PROGMEM gt_combo[] = {ALT_I, CTL_O, COMBO_END};
