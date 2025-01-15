@@ -63,6 +63,7 @@
 
 enum totem_layers {
     _BASE,
+    _GAMING_BASE,
     _NAV,
     _NUM,
     _FUN,
@@ -128,13 +129,13 @@ const uint16_t PROGMEM perc_combo[] = {KC_B, KC_G, COMBO_END};
 // Between home and bottom row
 const uint16_t PROGMEM tick_combo[] = {ALT_R, KC_X, COMBO_END};
 const uint16_t PROGMEM bsls_combo[] = {GUI_S, MEH_C, COMBO_END};
-const uint16_t PROGMEM eql_combo[] = {SHT_T, HYP_D, COMBO_END};
+const uint16_t PROGMEM eql_combo[] = {SHT_T, KC_D, COMBO_END};
 const uint16_t PROGMEM tilde_combo[] = {KC_G, KC_V, COMBO_END};
 
 // horizontal combos
 const uint16_t PROGMEM copy_combo[] = {KC_X, MEH_C, COMBO_END};
-const uint16_t PROGMEM paste_combo[] = {MEH_C, HYP_D, COMBO_END};
-const uint16_t PROGMEM cut_combo[] = {KC_X, HYP_D, COMBO_END};
+const uint16_t PROGMEM paste_combo[] = {MEH_C, KC_D, COMBO_END};
+const uint16_t PROGMEM cut_combo[] = {KC_X, KC_D, COMBO_END};
 
 // Right hand vertical combos
 // Between top and home row
@@ -145,7 +146,7 @@ const uint16_t PROGMEM amp_combo[] = {QWERTZ_Y, ALT_I, COMBO_END};
 
 // Between home and bottow row
 const uint16_t PROGMEM unds_combo[] = {KC_M, KC_K, COMBO_END};
-const uint16_t PROGMEM mins_combo[] = {SHT_N, HYP_H, COMBO_END};
+const uint16_t PROGMEM mins_combo[] = {SHT_N, KC_H, COMBO_END};
 const uint16_t PROGMEM slsh_combo[] = {GUI_E, MEH_COM, COMBO_END};
 const uint16_t PROGMEM pipe_combo[] = {ALT_I, KC_DOT, COMBO_END};
 
@@ -154,7 +155,7 @@ const uint16_t PROGMEM lsqr_combo[] = {KC_L, KC_U, COMBO_END};
 const uint16_t PROGMEM rsqr_combo[] = {KC_U, QWERTZ_Y, COMBO_END};
 const uint16_t PROGMEM lpar_combo[] = {SHT_N, GUI_E, COMBO_END};
 const uint16_t PROGMEM rpar_combo[] = {GUI_E, ALT_I, COMBO_END};
-const uint16_t PROGMEM lcbr_combo[] = {HYP_H, MEH_COM, COMBO_END};
+const uint16_t PROGMEM lcbr_combo[] = {KC_H, MEH_COM, COMBO_END};
 const uint16_t PROGMEM rcbr_combo[] = {MEH_COM, KC_DOT, COMBO_END};
 
 // Vertical combos: Umlaute
@@ -256,7 +257,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     QWERTZ_Y, QWERTZ_SINGLE_QUOTE,
               CTL_A,    ALT_R,    GUI_S,    SHT_T,    KC_G,      KC_M,     SHT_N,    GUI_E,    ALT_I,    CTL_O,
-    KC_TAB,   QWERTZ_Z, KC_X,     MEH_C,    HYP_D,    KC_V,      KC_K,     HYP_H,    MEH_COM,  KC_DOT,   QWERTZ_QUES,  KC_RALT,
+    KC_TAB,   QWERTZ_Z, KC_X,     MEH_C,    KC_D,     KC_V,      KC_K,     KC_H,     MEH_COM,  KC_DOT,   QWERTZ_QUES,  KC_RALT,
+                                  UTIL,     NAV,      OS_SHT,    KC_ENT,   NUM,      FUN
+ ),
+/*
+   ┌─────────────────────────────────────────────────┐
+   │ g a m i n g   b a s e                           │      ╭╮╭╮╭╮╭╮
+   └─────────────────────────────────────────────────┘      │╰╯╰╯╰╯│
+             ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
+             │    Q    │    W    │    F    │    P    │    B    ││    J    │    L    │    U    │    Y    │    '    │
+             ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
+             │    A    │    R    │    S    │    T    │    G    ││    M    │    N    │    E    │    I    │    O    │
+   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
+   │   ESC   │    Z    │    X    │    C    │    D    │    V    ││    K    │    H    │    ,;   │    .:   │   ?!    │  ALT_GR │
+   └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
+                                 │  UTIL   │  NAV    │  SHIFT  ││   ENT   │    NUM  │   FUN   │
+                                 └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘*/
+
+   [_GAMING_BASE] = LAYOUT(
+ //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
+              KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     QWERTZ_Y, QWERTZ_SINGLE_QUOTE,
+              KC_A,     KC_R,     KC_S,     KC_T,     KC_G,      KC_M,     SHT_N,    GUI_E,    ALT_I,    CTL_O,
+    KC_TAB,   QWERTZ_Z, KC_X,     KC_C,     KC_D,     KC_V,      KC_K,     KC_H,     MEH_COM,  KC_DOT,   QWERTZ_QUES,  KC_RALT,
                                   UTIL,     NAV,      OS_SHT,    KC_ENT,   NUM,      FUN
  ),
  /*
@@ -339,7 +361,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │         │         │         │         │         ││         │         │  VOL-   │         │         │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │         │         │         │         │         │         ││         │         │  PL/PA  │         │         │         │
+   │         │         │         │         │         │         ││         │         │  PL/PA  │         │ BASE_L  │   GB_L  │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │         │         │         ││         │         │  MUTE   │
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
@@ -348,7 +370,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               QK_BOOT,  _______,  _______,  _______,   _______,  RALT(KC_E),  KC_MPRV,  KC_VOLU,  KC_MNXT,   _______,
               _______,  _______,  _______,  _______,   _______,  _______,  _______,  KC_VOLD,  _______,   _______,
-    _______,  _______,  _______,  _______,  _______,   _______,  _______,  _______,  KC_MPLY,  _______,   _______, _______,
+    _______,  _______,  _______,  _______,  _______,   _______,  _______,  _______,  KC_MPLY,  _______,   DF(_BASE), DF(_GAMING_BASE),
                                   _______,  _______,   _______,  _______,  _______,  KC_MUTE
  )
 };
