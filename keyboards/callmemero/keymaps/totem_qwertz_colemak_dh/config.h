@@ -31,3 +31,4 @@ for more options.
 
 #define COMBO_COUNT 50
 #define COMBO_MUST_TAP_PER_COMBO
+#define COMBO_TERM 40
