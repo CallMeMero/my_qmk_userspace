@@ -13,6 +13,7 @@
 
 #include QMK_KEYBOARD_H
 #include <stdio.h>
+#include "keymap_german.h"
 #include "callmemero.h"
 
 // ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -142,7 +143,7 @@ const uint16_t PROGMEM cut_combo[] = {KC_X, KC_D, COMBO_END};
 const uint16_t PROGMEM caret_combo[] = {KC_J, KC_M, COMBO_END};
 const uint16_t PROGMEM plus_combo[] = {KC_L, SHT_N, COMBO_END};
 const uint16_t PROGMEM star_combo[] = {KC_U, GUI_E, COMBO_END};
-const uint16_t PROGMEM amp_combo[] = {QWERTZ_Y, ALT_I, COMBO_END};
+const uint16_t PROGMEM amp_combo[] = {DE_Y, ALT_I, COMBO_END};
 
 // Between home and bottow row
 const uint16_t PROGMEM unds_combo[] = {KC_M, KC_K, COMBO_END};
@@ -152,7 +153,7 @@ const uint16_t PROGMEM pipe_combo[] = {ALT_I, KC_DOT, COMBO_END};
 
 // Horizontal combos: brackets
 const uint16_t PROGMEM lsqr_combo[] = {KC_L, KC_U, COMBO_END};
-const uint16_t PROGMEM rsqr_combo[] = {KC_U, QWERTZ_Y, COMBO_END};
+const uint16_t PROGMEM rsqr_combo[] = {KC_U, DE_Y, COMBO_END};
 const uint16_t PROGMEM lpar_combo[] = {SHT_N, GUI_E, COMBO_END};
 const uint16_t PROGMEM rpar_combo[] = {GUI_E, ALT_I, COMBO_END};
 const uint16_t PROGMEM lcbr_combo[] = {KC_H, MEH_COM, COMBO_END};
@@ -168,8 +169,8 @@ const uint16_t PROGMEM lt_combo[] = {KC_M, SHT_N, COMBO_END};
 const uint16_t PROGMEM gt_combo[] = {ALT_I, CTL_O, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  COMBO(at_combo, QWERTZ_AT),
-  COMBO(hash_combo, QWERTZ_HASH),
+  COMBO(at_combo, DE_AT),
+  COMBO(hash_combo, DE_HASH),
   COMBO(dollar_combo, KC_DLR),
   COMBO(perc_combo, KC_PERC),
   COMBO(tick_combo, QWERTZ_TICK),
@@ -209,8 +210,8 @@ combo_t key_combos[COMBO_COUNT] = {
 const key_override_t quexclam_override =
   ko_make_with_layers_negmods_and_options(
       MOD_MASK_SHIFT,       // Trigger modifiers: shift
-      QWERTZ_QUES,             // Trigger key:
-      QWERTZ_EXLM,             // Replacement key:
+      DE_QUES,             // Trigger key:
+      DE_EXLM,             // Replacement key:
       ~0,                  // Activate on all layers
       MOD_MASK_CA,         // Do not activate when ctrl, alt or gui is pressed
       ko_option_no_reregister_trigger);
@@ -219,8 +220,8 @@ const key_override_t quexclam_override =
 const key_override_t quote_override =
   ko_make_with_layers_negmods_and_options(
       MOD_MASK_SHIFT,       // Trigger modifiers: shift
-      QWERTZ_SINGLE_QUOTE,  // Trigger key:
-      QWERTZ_DOUBLE_QUOTE,  // Replacement key:
+      DE_QUOT,  // Trigger key:
+      DE_DQUO,  // Replacement key:
       ~0,                  // Activate on all layers
       MOD_MASK_CA,         // Do not activate when ctrl, alt or gui is pressed
       ko_option_no_reregister_trigger);
@@ -255,9 +256,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [_BASE] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     QWERTZ_Y, QWERTZ_SINGLE_QUOTE,
+              KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     DE_Y    , DE_QUOT,
               CTL_A,    ALT_R,    GUI_S,    SHT_T,    KC_G,      KC_M,     SHT_N,    GUI_E,    ALT_I,    CTL_O,
-    KC_TAB,   QWERTZ_Z, KC_X,     MEH_C,    KC_D,     KC_V,      KC_K,     KC_H,     MEH_COM,  KC_DOT,   QWERTZ_QUES,  KC_RALT,
+    KC_TAB,   DE_Z    , KC_X,     MEH_C,    KC_D,     KC_V,      KC_K,     KC_H,     MEH_COM,  KC_DOT,   DE_QUES,  KC_RALT,
                                   UTIL,     NAV,      OS_SHT,    KC_ENT,   NUM,      FUN
  ),
 /*
@@ -276,7 +277,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [_GAMING_BASE] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              KC_LALT,  KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     QWERTZ_Y, _______,
+              KC_LALT,  KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     DE_Y    , _______,
               KC_TAB,   KC_R,     KC_S,     KC_T,     KC_G,      KC_M,     KC_N,     KC_E,     KC_I,     KC_O,
     KC_LCTL,  KC_LSFT,  KC_X,     KC_C,     KC_D,     KC_V,      KC_K,     KC_H,     KC_Q,     _______,  _______,  DF(_BASE),
                                   KC_1,     KC_SPACE, KC_2,      KC_ESC,   KC_ENT,   _______
