@@ -134,8 +134,8 @@ const uint16_t PROGMEM gt_combo[] = {ALT_I, CTL_O, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(at_combo, DE_AT),
   COMBO(hash_combo, DE_HASH),
-  COMBO(dollar_combo, KC_DLR),
-  COMBO(perc_combo, KC_PERC),
+  COMBO(dollar_combo, DE_DLR),
+  COMBO(perc_combo, DE_PERC),
   COMBO(tick_combo, DE_ACUT),
   COMBO(bsls_combo, DE_BSLS),
   COMBO(eql_combo, DE_EQL),
