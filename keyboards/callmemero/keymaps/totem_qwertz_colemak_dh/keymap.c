@@ -196,6 +196,31 @@ const key_override_t *key_overrides[] = {
 };
 
 
+// ┌─────────────────────────────────────────────────┐
+// │ c a p s   w o r d   o v e r r i d e             │
+// └─────────────────────────────────────────────────┘
+
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Keycodes that continue Caps Word, with shift applied.
+        case DE_A ... DE_Z:
+        case DE_MINS:
+            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+            return true;
+
+        // Keycodes that continue Caps Word, without shifting.
+        case DE_1 ... DE_0:
+        case KC_BSPC:
+        case KC_DEL:
+        case DE_MINS:
+            return true;
+
+        default:
+            return false;  // Deactivate Caps Word.
+    }
+}
+
+
 // ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 // │ K E Y M A P S                                                                                                          │
 // └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
