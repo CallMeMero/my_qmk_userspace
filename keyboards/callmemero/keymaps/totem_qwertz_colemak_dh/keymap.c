@@ -13,49 +13,13 @@
 
 #include QMK_KEYBOARD_H
 #include <stdio.h>
+#include "keymap_german.h"
 #include "callmemero.h"
 
 // ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 // │ D E F I N I T I O N S                                                                                                  │
 // └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 // ▝▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▘
-
-// ┌─────────────────────────────────────────────────┐
-// │ d e f i n e   q w e r t z   m a p p i n g       │
-// └─────────────────────────────────────────────────┘
-
-#define QWERTZ_SINGLE_QUOTE S(KC_BSLS)  //
-#define QWERTZ_DOUBLE_QUOTE KC_AT  //
-#define QWERTZ_Z KC_Y  //
-#define QWERTZ_Y KC_Z  //
-#define QWERTZ_QUES KC_UNDS  //
-#define QWERTZ_EXLM KC_EXLM  //
-#define QWERTZ_AT RALT(KC_Q)  //
-#define QWERTZ_HASH KC_BSLS  //
-#define QWERTZ_TICK KC_EQL  // ´
-#define QWERTZ_BSLS RALT(KC_MINS)  // \/
-#define QWERTZ_EQL KC_RPRN  //
-#define QWERTZ_TILD RALT(KC_RBRC)  //
-#define QWERTZ_CIRC KC_GRV  //
-#define QWERTZ_PPLS KC_RBRC  //
-#define QWERTZ_ASTR S(KC_RBRC)  //
-#define QWERTZ_AMPR KC_CIRC  //
-#define QWERTZ_UNDS S(KC_SLSH)  //
-#define QWERTZ_MINS KC_SLSH  //
-#define QWERTZ_SLSH KC_AMPR  //
-#define QWERTZ_PIPE RALT(KC_NUBS)  //
-#define QWERTZ_LSQR RALT(KC_8)  //
-#define QWERTZ_RSQR RALT(KC_9)  //
-#define QWERTZ_LBRC KC_ASTR  //
-#define QWERTZ_RBRC KC_LPRN  //
-#define QWERTZ_LCBR RALT(KC_7)  //
-#define QWERTZ_RCBR RALT(KC_0)  //
-#define QWERTZ_AE KC_QUOT  //
-#define QWERTZ_OE KC_SCLN  //
-#define QWERTZ_UE KC_LBRC  //
-#define QWERTZ_LT KC_NUBS  //
-#define QWERTZ_GT S(KC_NUBS)  //
-#define QWERTZ_SZ KC_MINS  //
 
 // ┌─────────────────────────────────────────────────┐
 // │ d e f i n e   l a y e r s                       │
@@ -142,7 +106,7 @@ const uint16_t PROGMEM cut_combo[] = {KC_X, KC_D, COMBO_END};
 const uint16_t PROGMEM caret_combo[] = {KC_J, KC_M, COMBO_END};
 const uint16_t PROGMEM plus_combo[] = {KC_L, SHT_N, COMBO_END};
 const uint16_t PROGMEM star_combo[] = {KC_U, GUI_E, COMBO_END};
-const uint16_t PROGMEM amp_combo[] = {QWERTZ_Y, ALT_I, COMBO_END};
+const uint16_t PROGMEM amp_combo[] = {DE_Y, ALT_I, COMBO_END};
 
 // Between home and bottow row
 const uint16_t PROGMEM unds_combo[] = {KC_M, KC_K, COMBO_END};
@@ -152,7 +116,7 @@ const uint16_t PROGMEM pipe_combo[] = {ALT_I, KC_DOT, COMBO_END};
 
 // Horizontal combos: brackets
 const uint16_t PROGMEM lsqr_combo[] = {KC_L, KC_U, COMBO_END};
-const uint16_t PROGMEM rsqr_combo[] = {KC_U, QWERTZ_Y, COMBO_END};
+const uint16_t PROGMEM rsqr_combo[] = {KC_U, DE_Y, COMBO_END};
 const uint16_t PROGMEM lpar_combo[] = {SHT_N, GUI_E, COMBO_END};
 const uint16_t PROGMEM rpar_combo[] = {GUI_E, ALT_I, COMBO_END};
 const uint16_t PROGMEM lcbr_combo[] = {KC_H, MEH_COM, COMBO_END};
@@ -168,37 +132,37 @@ const uint16_t PROGMEM lt_combo[] = {KC_M, SHT_N, COMBO_END};
 const uint16_t PROGMEM gt_combo[] = {ALT_I, CTL_O, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  COMBO(at_combo, QWERTZ_AT),
-  COMBO(hash_combo, QWERTZ_HASH),
-  COMBO(dollar_combo, KC_DLR),
-  COMBO(perc_combo, KC_PERC),
-  COMBO(tick_combo, QWERTZ_TICK),
-  COMBO(bsls_combo, QWERTZ_BSLS),
-  COMBO(eql_combo, QWERTZ_EQL),
-  COMBO(tilde_combo, QWERTZ_TILD),
+  COMBO(at_combo, DE_AT),
+  COMBO(hash_combo, DE_HASH),
+  COMBO(dollar_combo, DE_DLR),
+  COMBO(perc_combo, DE_PERC),
+  COMBO(tick_combo, DE_ACUT),
+  COMBO(bsls_combo, DE_BSLS),
+  COMBO(eql_combo, DE_EQL),
+  COMBO(tilde_combo, DE_TILD),
   COMBO(copy_combo, LCTL(KC_C)),
   COMBO(paste_combo, LCTL(KC_V)),
   COMBO(cut_combo, LCTL(KC_X)),
-  COMBO(caret_combo, QWERTZ_CIRC),
-  COMBO(plus_combo, QWERTZ_PPLS),
-  COMBO(star_combo, QWERTZ_ASTR),
-  COMBO(amp_combo, QWERTZ_AMPR),
-  COMBO(unds_combo, QWERTZ_UNDS),
-  COMBO(mins_combo, QWERTZ_MINS),
-  COMBO(slsh_combo, QWERTZ_SLSH),
-  COMBO(pipe_combo, QWERTZ_PIPE),
-  COMBO(lsqr_combo, QWERTZ_LSQR),
-  COMBO(rsqr_combo, QWERTZ_RSQR),
-  COMBO(lpar_combo, QWERTZ_LBRC),
-  COMBO(rpar_combo, QWERTZ_RBRC),
-  COMBO(lcbr_combo, QWERTZ_LCBR),
-  COMBO(rcbr_combo, QWERTZ_RCBR),
-  COMBO(ae_combo, QWERTZ_AE),
-  COMBO(oe_combo, QWERTZ_OE),
-  COMBO(ue_combo, QWERTZ_UE),
-  COMBO(lt_combo, QWERTZ_LT),
-  COMBO(gt_combo, QWERTZ_GT),
-  COMBO(sz_combo, QWERTZ_SZ)
+  COMBO(caret_combo, DE_CIRC),
+  COMBO(plus_combo, DE_PLUS),
+  COMBO(star_combo, DE_ASTR),
+  COMBO(amp_combo, DE_AMPR),
+  COMBO(unds_combo, DE_UNDS),
+  COMBO(mins_combo, DE_MINS),
+  COMBO(slsh_combo, DE_SLSH),
+  COMBO(pipe_combo, DE_PIPE),
+  COMBO(lsqr_combo, DE_LBRC),
+  COMBO(rsqr_combo, DE_RBRC),
+  COMBO(lpar_combo, DE_LPRN),
+  COMBO(rpar_combo, DE_RPRN),
+  COMBO(lcbr_combo, DE_LCBR),
+  COMBO(rcbr_combo, DE_RCBR),
+  COMBO(ae_combo, DE_ADIA),
+  COMBO(oe_combo, DE_ODIA),
+  COMBO(ue_combo, DE_UDIA),
+  COMBO(lt_combo, DE_LABK),
+  COMBO(gt_combo, DE_RABK),
+  COMBO(sz_combo, DE_SS)
 };
 
 // ┌─────────────────────────────────────────────────┐
@@ -209,8 +173,8 @@ combo_t key_combos[COMBO_COUNT] = {
 const key_override_t quexclam_override =
   ko_make_with_layers_negmods_and_options(
       MOD_MASK_SHIFT,       // Trigger modifiers: shift
-      QWERTZ_QUES,             // Trigger key:
-      QWERTZ_EXLM,             // Replacement key:
+      DE_QUES,             // Trigger key:
+      DE_EXLM,             // Replacement key:
       ~0,                  // Activate on all layers
       MOD_MASK_CA,         // Do not activate when ctrl, alt or gui is pressed
       ko_option_no_reregister_trigger);
@@ -219,8 +183,8 @@ const key_override_t quexclam_override =
 const key_override_t quote_override =
   ko_make_with_layers_negmods_and_options(
       MOD_MASK_SHIFT,       // Trigger modifiers: shift
-      QWERTZ_SINGLE_QUOTE,  // Trigger key:
-      QWERTZ_DOUBLE_QUOTE,  // Replacement key:
+      DE_QUOT,  // Trigger key:
+      DE_DQUO,  // Replacement key:
       ~0,                  // Activate on all layers
       MOD_MASK_CA,         // Do not activate when ctrl, alt or gui is pressed
       ko_option_no_reregister_trigger);
@@ -230,6 +194,34 @@ const key_override_t *key_overrides[] = {
   &quexclam_override,
   &quote_override
 };
+
+
+// ┌─────────────────────────────────────────────────┐
+// │ c a p s   w o r d   o v e r r i d e             │
+// └─────────────────────────────────────────────────┘
+
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Keycodes that continue Caps Word, with shift applied.
+        case DE_A ... DE_Z:
+        case DE_ADIA:
+        case DE_ODIA:
+        case DE_UDIA:
+        case DE_UNDS:
+            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+            return true;
+
+        // Keycodes that continue Caps Word, without shifting.
+        case DE_1 ... DE_0:
+        case KC_BSPC:
+        case KC_DEL:
+        case DE_MINS:
+            return true;
+
+        default:
+            return false;  // Deactivate Caps Word.
+    }
+}
 
 
 // ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -255,9 +247,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [_BASE] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     QWERTZ_Y, QWERTZ_SINGLE_QUOTE,
+              KC_Q,     KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     DE_Y    , DE_QUOT,
               CTL_A,    ALT_R,    GUI_S,    SHT_T,    KC_G,      KC_M,     SHT_N,    GUI_E,    ALT_I,    CTL_O,
-    KC_TAB,   QWERTZ_Z, KC_X,     MEH_C,    KC_D,     KC_V,      KC_K,     KC_H,     MEH_COM,  KC_DOT,   QWERTZ_QUES,  KC_RALT,
+    KC_TAB,   DE_Z    , KC_X,     MEH_C,    KC_D,     KC_V,      KC_K,     KC_H,     MEH_COM,  KC_DOT,   DE_QUES,  KC_RALT,
                                   UTIL,     NAV,      OS_SHT,    KC_ENT,   NUM,      FUN
  ),
 /*
@@ -276,7 +268,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [_GAMING_BASE] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              KC_LALT,  KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     QWERTZ_Y, _______,
+              KC_LALT,  KC_W,     KC_F,     KC_P,     KC_B,      KC_J,     KC_L,     KC_U,     DE_Y    , _______,
               KC_TAB,   KC_R,     KC_S,     KC_T,     KC_G,      KC_M,     KC_N,     KC_E,     KC_I,     KC_O,
     KC_LCTL,  KC_LSFT,  KC_X,     KC_C,     KC_D,     KC_V,      KC_K,     KC_H,     KC_Q,     _______,  _______,  DF(_BASE),
                                   KC_1,     KC_SPACE, KC_2,      KC_ESC,   KC_ENT,   _______
@@ -322,10 +314,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [_NUM] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              KC_PPLS,    KC_7,    KC_8,     KC_9,    KC_PAST,   _______,  _______,  _______,  _______, _______,
-              KC_0,       KC_4,    KC_5,     KC_6,    QWERTZ_EQL,_______,  KC_LSFT,  KC_LGUI,  KC_LALT, KC_LCTL,
-    _______,  KC_PMNS,    KC_1,    KC_2,     KC_3,    KC_PSLS,   _______,  KC_HYPR,  KC_MEH,   _______, _______,  _______,
-                                   _______,  KC_DOT,  KC_PDOT,   _______,  _______,  _______
+              DE_PLUS,    KC_7,    KC_8,     KC_9,    DE_ASTR,   _______,  _______,  _______,  _______, _______,
+              KC_0,       KC_4,    KC_5,     KC_6,    DE_EQL,    _______,  KC_LSFT,  KC_LGUI,  KC_LALT, KC_LCTL,
+    _______,  DE_MINS,    KC_1,    KC_2,     KC_3,    DE_SLSH,   _______,  KC_HYPR,  KC_MEH,   _______, _______,  _______,
+                                   _______,  DE_DOT,  DE_COMM,   _______,  _______,  _______
  ),
 /*
    ╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
@@ -357,20 +349,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    │ u t i l i t y                                   │      ╭╮╭╮╭╮╭╮
    └─────────────────────────────────────────────────┘      │╰╯╰╯╰╯│
              ┌─────────┬─────────┬─────────┬─────────┬──────╨──┐┌──╨──────┬─────────┬─────────┬─────────┬─────────┐
-             │   BOOT  │         │         │         │         ││    €    │  <<<<<  │  VOL+   │  >>>>>  │         │
+             │   BOOT  │         │         │         │    °    ││    €    │  <<<<<  │  VOL+   │  >>>>>  │         │
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
-             │         │         │         │         │         ││         │         │  VOL-   │         │         │
+             │         │         │         │         │         ││    µ    │         │  VOL-   │         │         │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │         │         │         │         │         │         ││         │         │  PL/PA  │         │         │   GB_L  │
+   │         │         │         │    ²    │    ³    │         ││    §    │         │  PL/PA  │         │         │   GB_L  │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │         │         │         ││         │         │  MUTE   │
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */
 
    [_UTIL] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              QK_BOOT,  _______,  _______,  _______,   _______,  RALT(KC_E),  KC_MPRV,  KC_VOLU,  KC_MNXT,   _______,
-              _______,  _______,  _______,  _______,   _______,  _______,  _______,  KC_VOLD,  _______,   _______,
-    _______,  _______,  _______,  _______,  _______,   _______,  _______,  _______,  KC_MPLY,  _______,   _______, DF(_GAMING_BASE),
+              QK_BOOT,  _______,  _______,  _______,   DE_DEG,   DE_EURO,  KC_MPRV,  KC_VOLU,  KC_MNXT,   _______,
+              _______,  _______,  _______,  _______,   _______,  DE_MICR,  _______,  KC_VOLD,  _______,   _______,
+    _______,  _______,  _______,  DE_SUP2,  DE_SUP3,   _______,  DE_SECT,  _______,  KC_MPLY,  _______,   _______, DF(_GAMING_BASE),
                                   _______,  _______,   _______,  _______,  _______,  KC_MUTE
  )
 };
