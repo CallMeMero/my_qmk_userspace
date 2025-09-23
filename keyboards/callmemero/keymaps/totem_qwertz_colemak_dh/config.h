@@ -28,6 +28,8 @@ for more options.
 //#define NO_ACTION_ONESHOT
 //#define NO_ACTION_TAPPING
 //#define NO_MUSIC_MODE
+#define ONESHOT_TAP_TOGGLE 2  /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
 
 #define COMBO_COUNT 50
 #define COMBO_MUST_TAP_PER_COMBO
