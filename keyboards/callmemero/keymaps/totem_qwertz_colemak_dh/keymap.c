@@ -202,7 +202,7 @@ const key_override_t *key_overrides[] = {
 bool caps_word_press_user(uint16_t keycode) {
     switch (keycode) {
         // Keycodes that continue Caps Word, with shift applied.
-        case DE_A ... DE_Z:
+        case KC_A ... KC_Z:
         case DE_ADIA:
         case DE_ODIA:
         case DE_UDIA:
